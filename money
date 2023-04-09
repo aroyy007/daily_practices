@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    char P[100], r[100], n[100];
+    float F, i;
+
+    printf("Enter total amount : ");
+    scanf("%s", P);
+    printf("Enter interest rate : ");
+    scanf("%s", r);
+    printf("Enter years : ");
+    scanf("%s", n);
+
+    i = atof(r) / 100.00; // atof() function to convert the character arrays to floating-point numbers
+    F = atof(P) * pow((1+i), atof(n));
+
+    printf("Final Amount : %.2f", F);
+
+    return 0;
+}
